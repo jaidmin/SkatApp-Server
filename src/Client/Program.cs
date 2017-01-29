@@ -42,7 +42,19 @@ namespace Client
                 var content = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(JArray.Parse(content));
             }
-    
+
+            var response2 = await client.GetAsync("http://localhost:5001/api/values/5");
+            if (!response2.IsSuccessStatusCode)
+            {
+                Console.WriteLine(response2.StatusCode);
+            }
+            else
+            {
+                var content2 = await response2.Content.ReadAsStringAsync();
+                Console.WriteLine(content2);
+            }
+
+
         }
     }
 }
