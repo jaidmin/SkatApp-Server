@@ -23,6 +23,7 @@ namespace Client
                 Console.WriteLine( tokenResponse.Error);
                 return;
             }
+
             Console.WriteLine(tokenResponse.Json);
 
 
