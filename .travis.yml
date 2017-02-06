@@ -1,7 +1,7 @@
 language: csharp
 mono: none
 dotnet: 1.0.0-preview2-1-003177
-solution: ./src/SkatApp.sln
+solution: ./SkatApp.sln
 dist: trusty
 
 
