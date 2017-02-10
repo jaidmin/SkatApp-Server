@@ -27,17 +27,17 @@ namespace IdentityServerAspNetIdentity.Controllers
         }
 
         [HttpGet]
-        [Route("api/Users")]
-        public IEnumerable<String> All()
+       
+        public IEnumerable<String> all()
         {
             var list2 = from user in _userManager.Users select user.UserName;
             return list2;
         }
         [HttpGet]
-        [Route("api/Users/current")]
-        public String one_user()
+        public String current()
         {
             System.Security.Claims.ClaimsPrincipal currentUser = this.User;
+
             var is_authenticated = _signInManager.IsSignedIn(currentUser);
             if (is_authenticated == true)
             {
@@ -48,6 +48,12 @@ namespace IdentityServerAspNetIdentity.Controllers
                 return "you are not authenticated/logged in";
             };
         }
+        /*public IEnumerable<string> signedin() {
+            var users = _userManager.Users;
+            var logged_in = from user in users where  _signInManager.IsSignedIn((ClaimsIdentity)user) == true select user;
+            return logged_in;
+
+}*/
 
         
     }

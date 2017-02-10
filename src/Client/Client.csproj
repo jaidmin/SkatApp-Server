@@ -9,6 +9,6 @@
     <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="IdentityModel" Version="2.4.0" />
+    <PackageReference Include="IdentityModel" Version="2.5.1" />
   </ItemGroup>
 </Project>
